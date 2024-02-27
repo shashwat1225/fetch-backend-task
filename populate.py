@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 # The URL to send the POST request to
-url = 'http://0.0.0.0:8000/process/'
+url = 'http://0.0.0.0:8000/receipts/process/'
 
 # List of retailer entries - You can add/remove entries to this list as per your convenience
 entries = [
