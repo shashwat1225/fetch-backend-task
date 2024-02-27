@@ -79,4 +79,4 @@ urlpatterns = [
 
 ## Further Instructions
 
-For more detailed information about the API and its specifications, refer to the `api.yml` file included in the repository. This file provides a formal definition of the API endpoints and expected payloads.
+For more detailed information about the API and its specifications, contact: spandey1225@gmail.com
