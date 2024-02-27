@@ -49,7 +49,7 @@ To run the application, follow these steps:
 After starting the server, the service is accessible at `http://0.0.0.0:8000/`.
 
 - **To Process Receipts:**
-  Use the `populate.py` script to send POST requests to the server. This script sends predefined receipt entries to the server and prints the retailer name, purchase timestamp, and unique ID for each processed receipt. You can modify the `entries` list in the script to include additional receipts or alter the existing ones.
+  Although I used Postman for testing, users can also use the `populate.py` script to send POST requests to the server. This script sends predefined receipt entries to the server and prints the retailer name, purchase timestamp, and unique ID for each processed receipt. You can modify the `entries` list in the script to include additional receipts or alter the existing ones.
 
   Run the script with:
   ```
