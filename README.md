@@ -61,7 +61,7 @@ After starting the server, the service is accessible at `http://0.0.0.0:8000/`.
   ```
   http://0.0.0.0:8000/receipts/<Unique ID>/points/
   ```
-  Replace `<Unique ID>` with the ID returned by the Process Receipts endpoint.
+  Replace `<Unique ID>` with the ID returned by the populate.py script.
 
 ## URL Paths
 
