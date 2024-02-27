@@ -62,20 +62,19 @@ results = []
 
 # Loop through each entry
 for entry in entries:
-    # Convert the Python dictionary to a JSON string
+    # Converting the Python dictionary to a JSON string
     json_data = json.dumps(entry)
 
-    # Send the POST request
+    # Sending the POST request
     response = requests.post(url, data=json_data, headers=headers)
 
-    # Check if the request was successful
+    # Checking if the request was successful
     if response.status_code == 200:
         response_data = response.json()
-        # Prepare formatted datetime from purchaseDate and purchaseTime
+        # Adding PurchaseTime and PurchaseDate to distinguish between each entry
         datetime_str = f"{entry['purchaseDate']} {entry['purchaseTime']}"
         datetime_obj = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M")
         formatted_datetime = datetime_obj.strftime("%H:%M - %m-%d-%Y")
-        # Append the ID, retailer, and formatted datetime to the results list
         results.append({
             "retailer": entry["retailer"],
             "id": response_data.get("id"),
@@ -85,7 +84,7 @@ for entry in entries:
         print("Request failed for retailer:", entry["retailer"], "with status code:", response.status_code)
         print("Response text:", response.text)
 
-# Print or process the results
+# Printing each ID of the entry that could be used to find the points
 for result in results:
     print("Retailer:", result["retailer"], "- Timestamp:", result["formatted_datetime"], "- ID:", result["id"])
 
