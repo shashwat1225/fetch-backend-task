@@ -73,7 +73,7 @@ from myapp.views import points, process
 
 urlpatterns = [
     path('receipts/<str:id>/points/', points),
-    path('process/', process),
+    path('receipts/process/', process),
 ]
 ```
 
